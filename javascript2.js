@@ -174,27 +174,47 @@ function finish(){
 
     //CREATE FIRST TABLE ROW
         var tr1 = document.createElement('tr')
-        create_table.appendChild(tr1)
 
         var create_th_resultado = document.createElement('th')
+        create_th_resultado.setAttribute('colspan', 2)
+        create_th_resultado.setAttribute('id' , 'resultado')
         tr1.appendChild(create_th_resultado)
         var th_resultado_desc = document.createTextNode('Resultado')
         create_th_resultado.appendChild(th_resultado_desc)
+
+        create_table.appendChild(tr1)
     //
 
     //CREATE SECOND TABLE ROW
         var tr2 = document.createElement('tr')
+
+        var td_scorretas = document.createElement('td')
+        tr2.appendChild(td_scorretas)
+        var scorretas_total = document.createTextNode('Corretas')
+        tr2.appendChild(scorretas_total)
+
+        var td_serradas = document.createElement('td')
+        tr2.appendChild(td_serradas)
+        var serradas_total = document.createTextNode('Erradas')
+        tr2.appendChild(serradas_total)
+
         create_table.appendChild(tr2)
+    //
+
+    //CREATE THIRD TABLE ROW
+        var tr3 = document.createElement('tr')
 
         var th_corretas = document.createElement('th')
-        tr2.appendChild(th_corretas)
+        tr3.appendChild(th_corretas)
         var corretas_total = document.createTextNode(points)
-        tr2.appendChild(corretas_total)
+        tr3.appendChild(corretas_total)
 
         var th_erradas = document.createElement('th')
-        tr2.appendChild(th_erradas)
+        tr3.appendChild(th_erradas)
         var corretas_total = document.createTextNode(wrong)
-        tr2.appendChild(corretas_total)
+        tr3.appendChild(corretas_total)
+
+        create_table.appendChild(tr3)
     //
 
 }
